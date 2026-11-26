@@ -1,11 +1,12 @@
-# data/ — corpus documental del curso
+# material — corpus documental del curso
 
 Materiales del curso **IF483BIN Formulación y Proyectos de TI (EPIIS–UNSAAC)**
 convertidos a Markdown: diapositivas de sesión, fichas de taller, consignas de
 evaluación y el caso documental del TDR de videoconferencia de 2021.
 
-Esta carpeta **no es contenido del informe**. Es la fuente de consulta desde la
-que se redacta `src/main/sections/*.tex`.
+Este repositorio **no es el informe**: es el corpus de consulta del que se
+redacta. El informe vive en otro repositorio (`informe`), donde las secciones
+están en `src/main/sections/*.tex`.
 
 ## Reglas duras
 
@@ -14,8 +15,9 @@ que se redacta `src/main/sections/*.tex`.
    significa una **captura nueva** con fecha nueva, no reescribir la existente.
 2. **No se copia literal al informe.** Se parafrasea; si hace falta, se cita por
    `library.bib` (la referencia va a `library.bib`, no al `.md`).
-3. **`main.tex` no enlaza nada de `data/`.** El PDF no depende de esta carpeta.
-4. **Lo que dice una diapositiva no es norma.** `data/` registra lo dictado en
+3. **El informe no enlaza nada de aquí.** Su `main.tex` no depende de este
+   repositorio: el corpus es lectura del equipo, no insumo de compilación.
+4. **Lo que dice una diapositiva no es norma.** Este repositorio registra lo dictado en
    clase; para marco legal/normativo (Invierte.pe, D. Leg. 1252, PMBOK) se cita la
    fuente oficial, no el deck.
 5. **`[H]` en las diapositivas = hipótesis didáctica**, no hecho del caso. Nunca
@@ -150,8 +152,8 @@ de hoy, y la ausencia de una partida no prueba que no se ejecutó.
 ## Cómo trabajar con esta carpeta
 
 ```bash
-rg -n 'tema' data/          # buscar por contenido, no por nombre
-rg -l '22 de octubre' data/ # localizar por la sesión (fecha dentro del archivo)
+rg -n 'tema' .          # buscar por contenido, no por nombre
+rg -l '22 de octubre' . # localizar por la sesión (fecha dentro del archivo)
 ```
 
 Antes de afirmar algo en el informe:
