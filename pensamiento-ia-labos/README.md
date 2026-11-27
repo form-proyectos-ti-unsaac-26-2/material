@@ -85,11 +85,12 @@ $ md5sum md/*/unidad-*/guia-*.md | sort    # ver qué versiones coinciden
 
 ## Archivos originales
 
-Los PDF, ZIP, XLSX, CSV y PNG de origen siguen intactos en la raíz, en las
+Los PDF, ZIP, XLSX, CSV y PNG de origen siguen intactos en `pdfs/`, en las
 carpetas `grupa a - unidad 1/`, `grupo a/GUIAS GRUPO A/`, `grupo b unidad 1/`, etc.
+Esa carpeta **no se versiona** (`.gitignore`): en un clon nuevo no existe.
 Equivalencias:
 
-| Carpeta de origen | Destino |
+| Carpeta de origen (bajo `pdfs/`) | Destino |
 | --- | --- |
 | `grupa a - unidad 1/` (sic) | `md/grupo-a/unidad-1/` |
 | `grupo a/GUIAS GRUPO A/` | `md/grupo-a/unidad-2/` |
@@ -108,7 +109,8 @@ Material adjunto que **no** está en `md/` porque no es texto convertible: los
 ## Regenerar
 
 ```console
-$ ~/skills/opencode-skill-pdf2md/.venv/bin/pdfmd "grupo b unidad 1/Guia 4 Grupo B - Pensamiento Computacional e IA.pdf" \
+$ cd pensamiento-ia-labos
+$ ~/skills/opencode-skill-pdf2md/.venv/bin/pdfmd "pdfs/grupo b unidad 1/Guia 4 Grupo B - Pensamiento Computacional e IA.pdf" \
     -o md/grupo-b/unidad-1/guia-04.md -v
 $ ~/skills/opencode-skill-pdf2md/.venv/bin/mdlint md/grupo-b/unidad-1/guia-04.md
 ```
