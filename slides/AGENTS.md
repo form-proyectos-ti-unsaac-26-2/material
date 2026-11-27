@@ -1,4 +1,4 @@
-# material — corpus documental del curso
+# slides/ — corpus documental del curso (IF483BIN)
 
 Materiales del curso **IF483BIN Formulación y Proyectos de TI (EPIIS–UNSAAC)**
 convertidos a Markdown: diapositivas de sesión, fichas de taller, consignas de
